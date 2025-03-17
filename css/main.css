@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 *{
     margin: 0;
@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-weight: 400;
     color: #fff;
     font-size: 16px;
@@ -23,7 +23,7 @@ img{
 .wrapper{
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(74,40,0,1) 100%);
     width: 100%;
-
+    margin: 0 auto;
 }
 .container{
     width: 85%;
@@ -31,40 +31,41 @@ img{
 }
 
 header{
-    
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    background:#181717;
+    background:#000000;
     border-end-start-radius: 15px;
     border-end-end-radius: 15px;
     color: white; 
     padding: 15px 20px;
     z-index: 1000;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Логотип і навігація */
+    align-items: center;
     
 }
 
 
 header .logo{
-    
     font-size: 29px;
     font-weight: 800;
 }
 
 header nav{
-    float: center;
-    width: 25%;
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    justify-self: end;
 }
 
 header nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     z-index: 2;
     position: relative;
 }
@@ -104,6 +105,8 @@ header nav ul li.btn a:hover{
     background: #965108;
 }
 
+/* Hero Body */
+
 .hero{
     padding-bottom: 100px;
     padding-top: 75px;
@@ -112,8 +115,10 @@ header nav ul li.btn a:hover{
 }
 
 .hero--info{
-    width: 530px;
+    width: 590px;
     padding-top: 50px;
+    z-index: 10;
+    position: relative;
 }
 
 .hero--info h2{
@@ -151,12 +156,21 @@ header nav ul li.btn a:hover{
     position: absolute;
     top: -50px;
     right: 0;
+    object-fit: cover; 
+    z-index: -1; 
+    
 }
 
 /* Games Section */
 .trending{
     padding-top: 50px;
 }  
+
+.texts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .trending h3{
     font-weight: 600;
@@ -178,17 +192,24 @@ header nav ul li.btn a:hover{
     scale: 1.1;
 }
 
-.trending .games{
+.trending .games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.trending .games .block {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .trending .games span{
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .trending .games span img{
@@ -206,12 +227,14 @@ header nav ul li.btn a:hover{
 }
 
 .block h3{
+    margin-top: 10px;
     font-size: 23px;
     font-weight: 600;
     text-align: center;
 }
 
 .block p{
+    margin-top: 5px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
@@ -221,17 +244,42 @@ header nav ul li.btn a:hover{
 
 .tournaments{
     background: #181717 ;
+    padding-bottom: 20px;
 }
+
+.texts .see-all{
+    background: #25211D;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+} 
 
 .tournaments .container h1{
     padding: 40px 0;
     font-weight: 800;
     font-size: 31px;
 }
-.tournaments .list-tournaments{
+
+.tournaments .list-tournaments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+    padding: 50px 15px;
+    text-align: center;
+}
+
+.tournaments .list-tournaments .block {
     display: flex;
-    justify-content: space-between;
-    padding: 50px;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%; 
+    padding: 20px;
+    background: #25211D;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -248,17 +296,19 @@ header nav ul li.btn a:hover{
 }
 
 .tournaments .container p{
-    text-align: center;
+    
     max-width: 24ch;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .list-tournaments .btn{
-    background: #DC7000;
-    display: block;
-    color: #fff;
+    align-self: flex-end; 
     margin: 0 auto;
+    margin-top: auto; 
+    background: #DC7000;
+    color: #fff;
     border-radius: 50px;
-    margin-top: 20px;
     padding: 15px 20px;
     transition: all 500ms ease;
     font-size: 17px;
@@ -273,11 +323,15 @@ header nav ul li.btn a:hover{
 
 footer{
     background: #000;
-    padding: 50px 0;
+    width: 100%;
+    padding: 50px 0 20px 0;
 }
-footer .block{
-    display: flex;
-    justify-content: space-between;
+
+footer .block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+    text-align: center;
 }
 
 footer span{
@@ -286,9 +340,9 @@ footer span{
 }
 
 footer .block p{
-    width: 380px;
+    width: 100%;
     margin: 10px 0;
-    text-align: left;
+    text-align: center;
 }
 
 footer .block h4{
@@ -320,11 +374,28 @@ footer > p{
     text-align: center;
 }
 
+@media (max-width: 1500px) {
+    .hero img {
+        filter: brightness(50%); 
+    }
+}
 
-/* Для планшетів (ширина екрана до 1024px) */
+/* Для планшетів */
 @media (max-width: 1024px) {
     .container {
-        width: 90%;
+        width: 85%;
+        padding: 0 15px;
+        
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    header.container {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 0 auto;
     }
 
     .hero--info {
@@ -337,160 +408,147 @@ footer > p{
         width: 80%;
         display: block;
         margin: 0 auto;
+        filter: brightness(100%);
     }
 
     .trending .games {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .trending .container {
+        padding: 20px;
     }
 
     .tournaments .block {
-        position: relative; 
-        height: 350px; 
-    }
-    .tournaments .block .btn {
-        position: absolute;
-        bottom: 10px; 
-        left: 50%; 
-        transform: translateX(-50%);
+        height: auto;
     }
 
-    header nav{
-        float: center;
-        width: 40%;
+    header .container{
+        width: 600px;
     }
-    
+
+    header nav {
+        width: 360px;
+        text-align: center;
+    }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     .container {
         width: 95%;
     }
 
-    header {
-        height: 185px;  /* Менша висота */
-        padding: 10px 15px; /* Менший внутрішній відступ */
+    .wrapper {
+        width: 100%;
     }
-    
+
+    header.container {
+        padding: 5px 5px;
+    }
+
+    header {
+        height: auto;
+        padding: 10px 15px;
+    }
+
     header .logo {
-        font-size: 22px; /* Менший розмір логотипу */
+        font-size: 17px;
     }
-    
+
     header nav ul {
-        gap: 15px; /* Зменшуємо відстань між пунктами */
+        flex-direction: column;
+        gap: 5px;
     }
-    
-    header nav ul li a {
-        font-size: 14px; /* Зменшуємо розмір шрифту */
-        padding: 5px 5px; /* Менші відступи у посилань */
-    }
-
-    header nav {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero--info{
-        
-        padding-top: 150px;
-    }
-
-    header nav ul li.btn {
-        width: 95%;
-        text-align: center;
-        margin-left: -32px;
-    }
-    header nav{
-        float: center;
-        width: 25%;
-    }
-    header nav ul {
-        flex-direction: column;  
-        align-items: center;     
-        gap: 10px;               
-    }
-
-    header nav ul li {
-        display: block;
-        width: 100%;
+    header nav  {
+        width: 200px;
     }
 
     header nav ul li a {
         display: block;
-        padding: 10px 0;
-        width: 100%;
-    }
-    
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    header nav {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 100px;
-    }
-
-    .hero img {
+        padding: 5px 0;
         width: 80%;
-        max-width: 250px;
-        margin: 20px auto 0;
-        position: static;
     }
 
     .hero--info {
-        width: 100%;
-        text-align: center;
+        padding-top: 180px;
     }
 
-    .hero--info h1 {
-        font-size: 28px;
+    .hero--info h1{
+        font-size: 30px;
     }
-
-    .hero--info p {
-        font-size: 14px;
-    }
-
 
     .trending .games {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    .trending .texts h3{
+        font-size: 25px;
+    }
+    .trending .texts .see-all{
+        font-size: 20px;
+    }
+
+    .big-text{
+        font-size: 30px;
+    }
+
+    .tournaments .texts h1{
+        font-size: 25px;
+    }
+    .tournaments .texts .see-all{
+        font-size: 20px;
+    }
+
+    .tournaments .block {
+        height: auto;
     }
 
 
-    .list-tournaments {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .list-tournaments .block {
-        text-align: center;
-        padding: 20px;
-    }
-
-   
-    footer .block {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    footer .block p {
-        width: auto;
-    }
+    
 }
 
+/* Стилі для профілю */
+.profile {
+    padding: 50px 0;
+}
+
+.profile-section {
+    background: #25211D;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile.hero.container {
+    padding-bottom: 20px;
+}
+
+.profile-section .hero--info {
+    width: 100%;
+}
+
+.profile.hero--info h1{
+    width: 600px;
+}
+
+.profile-section h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.profile-section p, .profile-section ul {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.profile-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-section ul li {
+    margin-bottom: 10px;
+}
