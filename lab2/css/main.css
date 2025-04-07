@@ -1,0 +1,1075 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.wrapper{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(74,40,0,1) 100%);
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}   
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #000000;
+    border-end-start-radius: 15px;
+    border-end-end-radius: 15px;
+    color: white; 
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 20px; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; 
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff; 
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #DC7000;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: -15px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #DC7000;
+}
+
+header nav ul li.btn a {
+    background: #DC7000;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover {
+    background: #965108;
+}
+/* Hero Body */
+
+.hero{
+    padding-bottom: 100px;
+    padding-top: 75px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info{
+    width: 590px;
+    padding-top: 50px;
+    z-index: 10;
+    position: relative;
+}
+
+.hero--info h2{
+    color: #DC7000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hero--info h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.hero--info p{
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info .btn{
+    background: #DC7000;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 20px;
+    transition: all 500ms ease;
+    font-size: 17px;
+}
+
+.hero--info .btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img{
+    position: absolute;
+    top: -50px;
+    right: 0;
+    object-fit: cover; 
+    z-index: -1; 
+    
+}
+
+/* Games Section */
+.trending{
+    padding-top: 50px;
+}  
+
+.texts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trending h3{
+    font-weight: 600;
+    font-size: 31px;
+}   
+
+.trending .see-all{
+    background: #25211D;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}   
+
+
+.trending .see-all:hover{
+    scale: 1.1;
+}
+
+.trending .games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.trending .games .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.trending .games span{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.trending .games span img{
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+.big-text{
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+}
+
+.block h3{
+    margin-top: 10px;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.block p{
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Games Tournaments */
+
+.tournaments{
+    background: #181717 ;
+    padding-bottom: 20px;
+}
+
+.texts .see-all{
+    background: #25211D;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+} 
+
+.tournaments .container h1{
+    padding: 40px 0;
+    font-weight: 800;
+    font-size: 31px;
+}
+
+.tournaments .list-tournaments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+    padding: 50px 15px;
+    text-align: center;
+}
+
+.tournaments .list-tournaments .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%; 
+    padding: 20px;
+    background: #25211D;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tournaments .container h2{
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+.tournaments .container h3{
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tournaments .container p{
+    
+    max-width: 24ch;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.list-tournaments .btn{
+    align-self: flex-end; 
+    margin: 0 auto;
+    margin-top: auto; 
+    background: #DC7000;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 20px;
+    transition: all 500ms ease;
+    font-size: 17px;
+}
+
+.list-tournaments .btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* footer */
+
+footer{
+    background: #000;
+    width: 100%;
+    padding: 50px 0 20px 0;
+}
+
+footer .block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+    text-align: center;
+}
+
+footer span{
+    font-size: 29px;
+    font-weight: 800;
+}
+
+footer .block p{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+footer .block h4{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+footer .block ul{
+    list-style: none;
+}
+
+footer .block ul li{
+    margin-top: 10px 0;
+    opacity: 0.7;
+}
+
+footer .block a{
+    color: #fff;
+}
+
+footer hr{
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background: #ccc;
+}
+
+footer > p{
+    text-align: center;
+}
+
+@media (max-width: 1500px) {
+    .hero img {
+        filter: brightness(50%); 
+    }
+}
+
+/* Для планшетів */
+@media (max-width: 1024px) {
+    .container {
+        width: 85%;
+        padding: 0 15px;
+        
+    }
+
+   
+
+    .wrapper {
+        width: 100%;
+    }
+
+    header.container {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 0 auto;
+    }
+
+    .hero--info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero img {
+        position: static;
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        filter: brightness(100%);
+    }
+
+    .trending .games {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .trending .container {
+        padding: 20px;
+    }
+
+    .tournaments .block {
+        height: auto;
+    }
+
+    header .container{
+        width: 600px;
+    }
+
+    header nav {
+        width: 440px;
+        text-align: center;
+    }
+    /* Стилі для профілю */
+    .profile.hero--info h1{
+        width: 80%;
+    }
+}
+
+@media (max-width: 840px) {
+    body {
+        font-size: 14px; 
+    }
+
+    
+    header .logo {
+        
+        font-size: 18px;
+    }
+
+    header nav {
+        width: 100%;
+        margin-right: 0; 
+    }
+
+    header nav ul {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .hero--info h1{
+        font-size: 40px;
+    }
+
+    .texts h3{
+        font-size: 28px;
+    }
+    .texts h1{
+        font-size: 24px;
+    }
+
+    .see-all.tournaments {
+        font-size: 18px;
+        padding: 10px;
+    }
+    footer .block {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+
+    footer span {
+        font-size: 24px; 
+    }
+
+    footer .block h4 {
+        font-size: 15px; 
+    }
+
+    footer .block p, footer .block ul li {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 510px) {
+    .container {
+        width: 95%;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    header.container {
+        padding: 5px 5px;
+    }
+
+    header {
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    header .logo {
+        font-size: 17px;
+    }
+
+    header nav  {
+        width: 100%; 
+        margin-left: 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 5px;
+        width: 90%;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 5px 0;
+        width: 95%; 
+        text-align: center; 
+    }
+
+    .hero--info {
+        padding-top: 180px;
+    }
+
+    .hero--info h1{
+        font-size: 30px;
+    }
+
+    .trending .games {
+        grid-template-columns: 1fr;
+    }
+
+    .trending .texts h3{
+        font-size: 25px;
+    }
+    .trending .texts .see-all{
+        font-size: 20px;
+    }
+
+    .big-text{
+        font-size: 30px;
+    }
+
+    .tournaments .texts h1{
+        font-size: 25px;
+    }
+    .tournaments .texts .see-all{
+        font-size: 20px;
+    }
+
+    .tournaments .block {
+        height: auto;
+    }
+    .big-text{
+        padding: 20px 0;
+        font-size: 22px;
+    }
+
+    .recommended-games .games {
+        margin-bottom: 10px;
+    }
+    .trending .games .block, .recommended-games .games .block {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+
+    .games .container .trending{
+        width: 90%;
+    }
+
+    footer {
+        padding: 30px 0 10px 0;
+    }
+
+    footer span {
+        font-size: 20px;
+    }
+
+    footer .block h4 {
+        font-size: 13px; 
+    }
+
+    footer .block p, footer .block ul li {
+        font-size: 12px; 
+    }
+}
+
+/* Стилі для сторінки профілю */
+.profile {
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 25px 15px; 
+    background: #181717;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box; 
+    
+}
+
+.profile .hero.container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background: linear-gradient(180deg, #25211D 0%, #181717 100%); 
+    width: 80%;
+    color: #fff;
+    text-align: center; 
+}
+
+.profile.hero--info {
+    max-width: 800px; 
+    text-align: center; 
+    border-radius: 15px;
+}
+
+.profile.hero--info h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #DC7000; 
+    margin-bottom: 10px; 
+}
+
+.profile.hero--info h1 {
+    font-size: 36px;
+    font-weight: 700; 
+    color: #fff; 
+    margin-bottom: 20px; 
+}
+
+.profile.hero--info p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    color: #fff; 
+    opacity: 0.8; 
+}
+
+
+.progress-container {
+    width: 100%;
+    background-color: #3d240a;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #DC7000;
+    width: 0; 
+    transition: width 0.5s ease; 
+}
+
+.profile-header {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #3d240a;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #DC7000;
+    margin-bottom: 10px;
+}
+
+.profile-header p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.profile-section {
+    margin: 20px auto;
+    padding: 20px;
+    background: #25211D;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    text-align: left;
+}
+
+.profile-section h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #DC7000;
+    margin-bottom: 15px;
+}
+
+.profile-section p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.profile-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-section ul li {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #3d240a;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.profile .hero--info {
+    width: 100%;
+    padding-top: 50px;
+    z-index: 10;
+    position: relative;
+}
+
+.profile-section ul li:hover {
+    background: #DC7000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.profile-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.profile-actions .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #DC7000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.profile-actions .btn:hover {
+    background: #965108;
+    transform: scale(1.1);
+}
+
+
+/* Стилі для всіх ігор */
+.all-games .recommended .games, .all-games .games, .trending .games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.all-games .block, .trending .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding: 20px;
+    border: 3px solid #3d240a; 
+    justify-content: space-between;
+}
+
+ .trending .block {
+    border: none; 
+    background: none;
+}
+
+.all-games .block img, .trending .block img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.all-games .block h3, .trending .block h3 {
+    margin-top: 10px;
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.all-games .block p, .trending .block p {
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.all-games .block span, .trending .block span {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.all-games .block span img, .trending .block span img {
+    
+    
+    margin-right: 7px;
+    width: 16px;
+}
+
+.all-games .block .favorite-btn, .trending .block .favorite-btn {
+    background: #DC7000;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.all-games .block .favorite-btn:hover, .trending .block .favorite-btn:hover {
+    cursor: pointer;
+    background: #965108;
+}
+
+
+
+.all-games .block.favorite, .trending .block.favorite {
+    background: #3d240a;
+    transform: scale(1.05); 
+}
+
+
+.all-games .block .divider, .trending .block .divider {
+    width: 100%;
+    height: 1px;
+    background: #444;
+    margin: 10px 0;
+}
+
+.container.all-games h4{
+    font-size: 25px;
+    padding-top: 85px;
+}
+
+
+/* Стилі для всіх турнірів */
+.all-tournaments .tournaments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    padding: 10px;
+}
+
+.all-tournaments h3{
+    padding-top: 90px;
+    font-size: 26px;
+    font-weight: 700;
+}
+.all-tournaments h2{
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.all-tournaments .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: #25211D;
+    border-radius: 10px;
+    text-align: center;
+    height: 440px;
+}
+
+.all-tournaments .block h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.all-tournaments .block h3 {
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.all-tournaments .block p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.all-tournaments .block .btn {
+    background: #DC7000;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 20px;
+    transition: all 500ms ease;
+    font-size: 17px;
+}
+
+.all-tournaments .block .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}   
+
+
+
+/* Стилі для модального вікна */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(5px); 
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #25211D, #3d240a); 
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #DC7000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 15px 0 5px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.modal-content form {
+    padding: 20px; 
+    box-sizing: border-box; 
+    width: 100%; 
+}
+
+.modal-content input {
+    width: calc(100% - 24px); 
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #DC7000;
+    border-radius: 8px;
+    background: #181717;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.modal-content input:focus {
+    border-color: #965108;
+    background: #25211D;
+}
+
+.modal-content .btn {
+    width: 100%;
+    padding: 12px;
+    background: #DC7000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.modal-content .btn:hover {
+    background: #965108;
+    transform: scale(1.05);
+}
+
+.modal-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #DC7000; 
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.modal-btn:hover {
+    background: #965108; 
+    transform: scale(1.05); 
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #DC7000;
+    transform: rotate(90deg);
+}

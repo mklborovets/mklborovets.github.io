@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всі турніри - VersusGames</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="logo">VersusGames</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="index.html#games">Ігри</a></li>
+                    <li><a href="index.html#tournaments">Турніри</a></li>
+                    <li class="btn"><a href="profile.html">Мій профіль</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <section class="container all-tournaments">
+                <h3>Всі турніри</h3>
+                <p>На цій сторінці ви знайдете всі наші турніри. Виберіть турнір та приєднуйтесь до змагань!</p>
+                <div id="all-tournaments" class="tournaments"></div>
+            </section>
+            <div id="register-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" id="close-register-modal">&times;</span>
+                    <h3>Реєстрація на турнір</h3>
+                    <form id="register-form">
+                        <label for="name">Ім'я:</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше ім'я">
+                        
+                        <label for="email">Електронна пошта:</label>
+                        <input type="email" id="email" name="email" placeholder="Ваш email">
+                        
+                        <label for="team">Назва команди (необов'язково):</label>
+                        <input type="text" id="team" name="team" placeholder="Назва команди">
+                        
+                        <button type="submit" class="btn">Зареєструватися</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="block container">
+                <div>
+                    <span>VersusGames</span>
+                    <p>Ласкаво просимо до світу онлайн-ігор</p>
+                </div>
+                <div>
+                    <h4>Про нас</h4>
+                    <ul>
+                        <li><a href="#">Zeux</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Зв'язатися з нами</h4>
+                    <p>+067 135 3253</p>
+                    <p>VersusGames@gmail.com</p>
+                    <p>Львів</p>
+                </div>
+            </div>
+            <hr>
+            <p>Copyright ® 2025 Усі права збережено</p>
+        </footer>
+    </div>
+
+    <script src="js/all-tournaments.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBoy</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="logo">VersusGames</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="#games">Ігри</a></li>
+                    <li><a href="#tournaments">Турніри</a></li>
+                    <li class="btn"><a href="profile.html">Мій профіль</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <section class="hero container">
+                <div class="hero--info">
+                    <h2>Ласкаво просимо до світу онлайн-ігор!</h2>
+                    <h1>Приєднуйтесь до нашої ігрової спільноти та досліджуйте найкращі онлайн-ігри</h1>
+                    <p>🔹 Відкрийте для себе найкращі ігри – перегляньте колекцію захоплюючих ігор із рейтингами та жанрами.<br>
+                        🏆 Змагайтеся в турнірах – кидайте виклик іншим гравцям і вигравайте чудові нагороди.<br>
+                        👤 Ваш профіль, ваша легенда – відстежуйте свою статистику, історію ігор і особисті досягнення.</p>
+                    <button id="more-info-btn" class="btn">Більше інформації</button>
+
+                    <div id="info-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" id="close-modal">&times;</span>
+                            <h3>Куди далі?</h3>
+                            <button class="modal-btn" onclick="window.location.href='all-games.html'">Обрати свою гру</button>
+                            <button class="modal-btn" onclick="window.location.href='all-tournaments.html'">Змагайся у турнірах</button>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/joystick.svg" alt="">
+            </section>
+
+            <section class="container trending" id="games">
+                <div class="texts">
+                    <h3>Рекомендовані ігри</h3>
+                    <a href="all-games.html" class="see-all">Всі ігри</a>
+                </div>
+                <div id="recommended-games" class="games"></div>
+                <div class="container big-text">
+                    <p>Спробуйте ці ігри — вони найпопулярніші на сайті!</p>
+                </div>
+            </section>
+            
+            <section class="tournaments" id="tournaments">
+                <div class="container">
+                    <div class="texts">
+                        <h1>Найближчі турніри</h1>
+                        <a href="all-tournaments.html" class="see-all tournaments">Всі турніри</a>
+                    </div>
+                    <div class="list-tournaments">
+                        <div class="block">
+                            <h2>Summoner’s Showdown</h2>
+                            <h3>Leage of Legends</h3>
+                            <p>Дата: березень 25, 2025</p>
+                            <p>Призовий фонд: $50,000</p>
+                            <p>Вимоги: 18+ років, ранг Diamond, або вище</p>
+                            <button class="btn" data-tournament="Summoner’s Showdown">Зареєструватися</button>
+                        </div>
+                        <div class="block">
+                            <h2>Battle of Legends</h2>
+                            <h3>For Honor</h3>
+                            <p>Дата: квітень 20, 2025</p>
+                            <p>Призовий фонд: $80,000</p>
+                            <p>Вимоги: Відкритий для всіх, один або команда (максимум 3 гравці)</p>
+                            <button class="btn" data-tournament="Battle of Legends">Зареєструватися</button>
+                        </div>
+                        <div class="block">
+                            <h2>Ultimate Arena</h2>
+                            <h3>Leage of Legends</h3>
+                            <p>Дата: квітень 15, 2025</p>
+                            <p>Призовий фонд: $250,000</p>
+                            <p>Вимоги: 18+ років, ранг Master, або вище</p>
+                            <button class="btn" data-tournament="Ultimate Arena">Зареєструватися</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="register-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" id="close-register-modal">&times;</span>
+                        <h3>Реєстрація на турнір</h3>
+                        <form id="register-form">
+                            <label for="name">Ім'я:</label>
+                            <input type="text" id="name" name="name" placeholder="Ваше ім'я" required>
+                            
+                            <label for="email">Електронна пошта:</label>
+                            <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                            
+                            <label for="team">Назва команди (необов'язково):</label>
+                            <input type="text" id="team" name="team" placeholder="Назва команди">
+                            
+                            <button type="submit" class="btn">Зареєструватися</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="block container">
+                <div>
+                    <span>VersusGames</span>
+                    <p>Ласкаво просимо до світу онлайн-ігор</p>
+                </div>
+                <div>
+                    <h4>Про нас</h4>
+                    <ul>
+                        <li><a href="#">Zeux</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Зв'язатися з нами</h4>
+                    <p>+067 135 3253</p>
+                    <p>VersusGames@gmail.com</p>
+                    <p>Львів</p>
+                </div>
+            </div>
+            <hr>
+            <p>Copyright ® 2025 Усі права збережено</p>
+        </footer>
+    </div>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
